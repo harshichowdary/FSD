@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selector Forms Example</title>
+
+  <style>
+    /* Center all text by default */
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      color: green; 
+    }
+
+    #myId {
+      background-color: lightyellow; 
+      display: inline-block;  /* center block elements */
+      padding: 5px;
+    }
+
+    .myClass {
+      color: blue; 
+      display: inline-block;
+      padding: 5px;
+    }
+
+    h3, h4 {
+      font-family: Arial, sans-serif; 
+    }
+
+    * {
+      margin: 5px; 
+    }
+
+    div {
+      display: inline-block; /* center div content */
+      text-align: left;      /* keep div text aligned left */
+      margin: 10px auto;
+      padding: 10px;
+      background-color: #f0f0f0;
+    }
+
+    div p {
+      color: purple; 
+    }
+
+    div > p.child {
+      font-weight: bold; 
+    }
+
+    h3 + p {
+      color: orange; 
+    }
+
+    h3 ~ p {
+      font-style: italic; 
+    }
+
+    a:hover {
+      color: red; 
+    }
+
+    p::first-letter {
+      font-size: 24px; 
+      color: brown;
+    }
+
+    input[type="text"], input[type="email"] {
+      border: 2px solid green;
+      padding: 5px;
+      margin: 5px 0;
+    }
+
+    form {
+      display: inline-block; 
+      text-align: left;      
+      margin-top: 10px;
+    }
+  </style>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>CSS Selector Forms Demo</h2>
+
+  <p id="myId">This paragraph uses ID selector (#myId).</p>
+
+  <p class="myClass">This paragraph uses Class selector (.myClass).</p>
+
+  <h3>Heading 3 - group selector example</h3>
+  <h4>Heading 4 - group selector example</h4>
+
+  <div>
+    <p>This paragraph is a descendant of div.</p>
+    <p class="child">This paragraph is a direct child of div.</p>
+  </div>
+
+  <h3>Heading 3 for sibling example</h3>
+  <p>Adjacent sibling paragraph (orange).</p>
+  <p>General sibling paragraph (italic).</p>
+
+  <a href="#">Hover over this link to see pseudo-class effect</a>
+
+  <p>This paragraph demonstrates the first letter pseudo-element.</p>
+
+  <form>
+    Name: <input type="text" placeholder="Enter your name"><br>
+    Email: <input type="email" placeholder="Enter your email">
+  </form>
+
+</body>
+</html>
