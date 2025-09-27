@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Input Methods</title>
+</head>
+<body>
+  <h2>Different JavaScript Input Methods</h2>
+
+  <p id="showPrompt"></p>
+  <p id="showBox"></p>
+  <p id="showConfirm"></p>
+  <input type="text" id="nameBox" placeholder="Enter your name">
+  <button onclick="readInputBox()">Submit</button>
+
+  <script>
+    let age = prompt("Enter your age:");
+    document.getElementById("showPrompt").innerHTML = "Your age (from prompt) is: " + age;
+    function readInputBox() {
+      let name = document.getElementById("nameBox").value;
+      document.getElementById("showBox").innerHTML = "Your name (from input box) is: " + name;
+    }
+    let choice = confirm("Do you like JavaScript?");
+    if (choice) {
+      document.getElementById("showConfirm").innerHTML = "You clicked OK (Yes)";
+    } else {
+      document.getElementById("showConfirm").innerHTML = "You clicked Cancel (No)";
+    }
+    console.log("Type in console: let x = prompt('Enter something:'); then console.log(x);");
+  </script>
+</body>
+</html>

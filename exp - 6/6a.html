@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Combined JS Demo</title>
+  <style>
+    body { font-family: Arial; text-align: center; padding: 30px; }
+    input { padding: 6px; margin: 6px; }
+    button { padding: 6px 12px; }
+    p { font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <h2>Web page</h2>
+
+  
+  <button onclick="showPrompt()">Say Hello</button>
+  <p id="greet"></p>
+
+  
+  <input id="num" type="text" placeholder="Enter a number">
+  <button onclick="doubleNumber()">Double</button>
+  <p id="result"></p>
+
+  
+  <script>
+   
+    function showPrompt() {
+      let name = prompt("Enter your name:");
+      if (name) {
+        document.getElementById("greet").innerText = "Hello, " + name + "!";
+      }
+    }
+
+    function doubleNumber() {
+      let value = document.getElementById("num").value;
+      let num = Number(value); 
+
+      if (isNaN(num)) {
+        alert("Please enter a valid number!");
+      } else {
+        document.getElementById("result").innerText = "Result: " + (num * 2);
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS Output Examples</title>
+</head>
+<body>
+  <h2>Different JavaScript Output Methods</h2>
+
+  <p id="msg1"></p>
+  <p id="msg2"></p>
+
+  <script>
+    alert("Welcome! This message is shown using alert()");
+    document.write("<h3>Output using document.write()</h3>");
+    document.write("Hello World from document.write()<br><br>");
+    document.getElementById("msg1").innerHTML = "This line is set using innerHTML.";
+    document.getElementById("msg2").innerHTML = "Another example with innerHTML.";
+    let a = 10, b = 20;
+    let sum = a + b;
+    console.log("Sum of " + a + " and " + b + " is " + sum);
+  </script>
+</body>
+</html>
