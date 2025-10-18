@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Loops Example</title>
+</head>
+<body>
+    <h2>Numbers 1 to 10 Using Different Loops</h2>
+
+    <h3>Using for loop:</h3>
+    <p id="forLoop"></p>
+
+    <h3>Using while loop:</h3>
+    <p id="whileLoop"></p>
+
+    <h3>Using do-while loop:</h3>
+    <p id="doWhileLoop"></p>
+
+    <script>
+        let forResult = "";
+        for (let i = 1; i <= 10; i++) {
+            forResult += i + " ";
+        }
+        document.getElementById("forLoop").innerHTML = forResult;
+        let j = 1;
+        let whileResult = "";
+        while (j <= 10) {
+            whileResult += j + " ";
+            j++;
+        }
+        document.getElementById("whileLoop").innerHTML = whileResult;
+        let k = 1;
+        let doWhileResult = "";
+        do {
+            doWhileResult += k + " ";
+            k++;
+        } while (k <= 10);
+        document.getElementById("doWhileLoop").innerHTML = doWhileResult;
+    </script>
+</body>
+</html>

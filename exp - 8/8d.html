@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Object Loop Example</title>
+</head>
+<body>
+    <h2>Display Object Data Using Different Loops</h2>
+
+    <h3>Using for-in Loop:</h3>
+    <p id="forIn"></p>
+
+    <h3>Using forEach Loop:</h3>
+    <p id="forEach"></p>
+
+    <h3>Using for-of Loop:</h3>
+    <p id="forOf"></p>
+
+    <script>
+        let student = {
+            name: "Harshitha",
+            age: 20,
+            course: "JavaScript",
+            grade: "A"
+        };
+        let inResult = "";
+        for (let key in student) {
+            inResult += key + ": " + student[key] + "<br>";
+        }
+        document.getElementById("forIn").innerHTML = inResult;
+        let entries = Object.entries(student); 
+        let eachResult = "";
+        entries.forEach(function(item) {
+            eachResult += item[0] + ": " + item[1] + "<br>";
+        });
+        document.getElementById("forEach").innerHTML = eachResult;
+        let ofResult = "";
+        for (let [key, value] of Object.entries(student)) {
+            ofResult += key + ": " + value + "<br>";
+        }
+        document.getElementById("forOf").innerHTML = ofResult;
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Conditional Statements Example</title>
+</head>
+<body>
+    <h2>Find the Larger Number</h2>
+
+    <script>
+        let num1 = parseInt(prompt("Enter the first number:"));
+        let num2 = parseInt(prompt("Enter the second number:"));
+        let num3 = parseInt(prompt("Enter the third number:"));
+
+        let message = "";
+        if (num1 === num2 && num2 === num3) {
+            message = "EQUAL NUMBERS";
+        } else if (num1 >= num2 && num1 >= num3) {
+            message = num1 + " LARGER NUMBER";
+        } else if (num2 >= num1 && num2 >= num3) {
+            message = num2 + " LARGER NUMBER";
+        } else {
+            message = num3 + " LARGER NUMBER";
+        }
+        document.write("<h3>" + message + "</h3>");
+    </script>
+</body>
+</html>
