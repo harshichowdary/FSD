@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        input {
+            margin: 5px 0;
+            padding: 5px;
+            width: 250px;
+        }
+        button {
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+        #message {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .error {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2>Registration Form</h2>
+
+    <form id="regForm" onsubmit="return validateForm()">
+        <label>Name:</label><br>
+        <input type="text" id="name" placeholder="Enter Name"><br>
+
+        <label>Mobile:</label><br>
+        <input type="text" id="mobile" placeholder="Enter Mobile Number"><br>
+
+        <label>E-mail:</label><br>
+        <input type="text" id="email" placeholder="Enter Email"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value.trim();
+            let mobile = document.getElementById("mobile").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let message = "";
+            let valid = true;
+            let namePattern = /^[A-Za-z][A-Za-z0-9]{5,}$/; 
+            if (!namePattern.test(name)) {
+                message += "Invalid Name: Must start with a letter and be at least 6 characters long.<br>";
+                valid = false;
+            }
+            let mobilePattern = /^[0-9]{10}$/; 
+            if (!mobilePattern.test(mobile)) {
+                message += "Invalid Mobile: Must be exactly 10 digits.<br>";
+                valid = false;
+            }
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/; 
+            if (!emailPattern.test(email)) {
+                message += "Invalid Email: Must be in format xxxxx@xxxxx.xxx<br>";
+                valid = false;
+            }
+            let msgElement = document.getElementById("message");
+            if (valid) {
+                msgElement.innerHTML = "Registration Successful ✅";
+                msgElement.className = "success";
+            } else {
+                msgElement.innerHTML = message;
+                msgElement.className = "error";
+            }
+
+            return false; 
+        }
+    </script>
+</body>
+</html>

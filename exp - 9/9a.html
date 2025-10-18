@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Functions and Events</title>
+</head>
+<body>
+    <h2>Number Operations </h2>
+
+    <label>Enter a number: </label>
+    <input type="number" id="numInput" />
+    <br><br>
+
+    <button onclick="calculateFactorial()">Factorial</button>
+    <button onclick="generateFibonacci()">Fibonacci Series</button>
+    <button onclick="generatePrimes()">Prime Numbers</button>
+    <button onclick="checkPalindrome()">Palindrome Check</button>
+
+    <h3>Result:</h3>
+    <p id="result"></p>
+
+    <script>
+        function calculateFactorial() {
+            let num = parseInt(document.getElementById("numInput").value);
+            if (num < 0) {
+                document.getElementById("result").innerHTML = "Factorial not defined for negative numbers.";
+                return;
+            }
+            let fact = 1;
+            for (let i = 1; i <= num; i++) {
+                fact *= i;
+            }
+            document.getElementById("result").innerHTML = "Factorial of " + num + " is " + fact;
+        }
+        function generateFibonacci() {
+            let num = parseInt(document.getElementById("numInput").value);
+            let fib = [0, 1];
+            for (let i = 2; i < num; i++) {
+                fib[i] = fib[i - 1] + fib[i - 2];
+            }
+            let series = fib.slice(0, num).join(", ");
+            document.getElementById("result").innerHTML = "Fibonacci series up to " + num + " terms:<br>" + series;
+        }
+        function generatePrimes() {
+            let num = parseInt(document.getElementById("numInput").value);
+            let primes = [];
+            for (let i = 2; i <= num; i++) {
+                let isPrime = true;
+                for (let j = 2; j <= Math.sqrt(i); j++) {
+                    if (i % j === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) primes.push(i);
+            }
+            document.getElementById("result").innerHTML = "Prime numbers up to " + num + ":<br>" + primes.join(", ");
+        }
+        function checkPalindrome() {
+            let num = document.getElementById("numInput").value;
+            let reversed = num.split("").reverse().join("");
+            if (num === reversed) {
+                document.getElementById("result").innerHTML = num + " is a Palindrome ✅";
+            } else {
+                document.getElementById("result").innerHTML = num + " is NOT a Palindrome ❌";
+            }
+        }
+    </script>
+</body>
+</html>
