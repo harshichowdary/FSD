@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript User-Defined Object Example</title>
+</head>
+<body>
+    <h2>Using User-Defined Object in JavaScript</h2>
+    <p id="objectInfo"></p>
+
+    <script>
+        
+        function Student(name, age, course) {
+            this.name = name;        
+            this.age = age;          
+            this.course = course;    
+            this.displayInfo = function() {
+                return "Name: " + this.name + "<br>Age: " + this.age + "<br>Course: " + this.course;
+            };
+            this.getCourse = function() {
+                return this.course;
+            };
+            this.setCourse = function(newCourse) {
+                this.course = newCourse;
+            };
+        }
+        let student1 = new Student("Jayasri", 20, "JavaScript");
+        student1.setCourse("Web Development");
+        document.getElementById("objectInfo").innerHTML =
+            "<b>Student Information:</b><br>" + student1.displayInfo() +
+            "<br><br>Updated Course (via getter): " + student1.getCourse();
+    </script>
+</body>
+</html>

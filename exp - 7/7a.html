@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript</title> 
+    <meta charset="UTF-8">
+</head>
+<body>
+<h2>Using Document Object Properties and Methods</h2>
+<p id="demo">Click a button to see or change document details.</p>
+<button onclick="showDocumentDetails()">Show Document Info</button>
+<button onclick="changeBackground()">Change Background Color</button>
+
+<script>
+function showDocumentDetails() {
+    let title = document.title;         
+    let url = document.URL;              
+    let lastModified = document.lastModified; 
+    let info = `
+        <h3>Document Details:</h3>
+        <b>Title:</b> ${title} <br>
+        <b>URL:</b> ${url} <br>
+        <b>Last Modified:</b> ${lastModified}
+    `;
+    document.getElementById("demo").innerHTML = info;
+}
+
+function changeBackground() {
+    document.bgColor = "lightgreen";  
+    document.getElementById("demo").innerHTML = "✅ Background color changed to light green!";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Date Example</title>
+</head>
+<body>
+    <h2>Using Date Object in JavaScript</h2>
+    <p id="dateInfo"></p>
+
+    <script>
+        let currentDate = new Date();
+        let year = currentDate.getFullYear();     
+        let month = currentDate.getMonth() + 1;   
+        let day = currentDate.getDate();         
+        let hours = currentDate.getHours();      
+        let minutes = currentDate.getMinutes();   
+        let seconds = currentDate.getSeconds();   
+        document.getElementById("dateInfo").innerHTML =
+            "Current Date: " + currentDate + "<br>" +
+            "Year: " + year + "<br>" +
+            "Month: " + month + "<br>" +
+            "Day: " + day + "<br>" +
+            "Time: " + hours + ":" + minutes + ":" + seconds + "<br>" +
+            "Visit for more info: <a href='https://www.w3schools.com/js/js_syntax.asp' target='_blank'>JavaScript Tutorial</a>";
+    </script>
+</body>
+</html>

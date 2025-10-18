@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript RegExp Example</title>
+</head>
+<body>
+    <h2>Using RegExp Object in JavaScript</h2>
+    <p id="regexInfo"></p>
+
+    <script>
+        let pattern = /java/i;    
+        let text = "I am learning JavaScript at W3Schools.";
+        let testResult = pattern.test(text);      
+        let matchResult = text.match(pattern);      
+        let searchPosition = text.search(pattern);  
+        let replacedText = text.replace(pattern, "Python"); 
+        document.getElementById("regexInfo").innerHTML =
+            "Original Text: " + text + "<br>" +
+            "Pattern: " + pattern + "<br>" +
+            "Test Result: " + testResult + "<br>" +
+            "Matched Word: " + matchResult + "<br>" +
+            "Match Position: " + searchPosition + "<br>" +
+            "After Replace: " + replacedText + "<br>" +
+            "Visit for more info: <a href='https://www.w3schools.com/js/js_syntax.asp' target='_blank'>JavaScript Tutorial</a>";
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Array Example</title>
+</head>
+<body>
+    <h2>Using Array Object in JavaScript</h2>
+    <p id="arrayInfo"></p>
+
+    <script>
+        let fruits = ["Apple", "Banana", "Cherry"];
+        let length = fruits.length;           
+        fruits.push("Mango");                 
+        fruits.sort();                        
+        let first = fruits[0];               
+        let joined = fruits.join(", ");      
+        document.getElementById("arrayInfo").innerHTML =
+            "Array Elements: " + joined + "<br>" +
+            "Array Length: " + length + "<br>" +
+            "First Element: " + first + "<br>" +
+            "Visit for more info: <a href='https://www.w3schools.com/js/js_syntax.asp' target='_blank'>JavaScript Tutorial</a>";
+    </script>
+</body>
+</html>

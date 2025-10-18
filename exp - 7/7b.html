@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Window Example</title>
+</head>
+<body>
+    <h2>Using Window Object</h2>
+    <p id="windowInfo"></p>
+
+    <script>
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+        let locationURL = window.location.href;
+        document.getElementById("windowInfo").innerHTML =
+            "Window Width: " + width + "px<br>" +
+            "Window Height: " + height + "px<br>" +
+            "Current URL: " + locationURL;
+        window.alert("Welcome to JavaScript Window Example!\nVisit: https://www.w3schools.com/js/js_syntax.asp");
+    </script>
+</body>
+</html>

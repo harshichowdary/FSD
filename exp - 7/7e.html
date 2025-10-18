@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript String Example</title>
+</head>
+<body>
+    <h2>Using String Object in JavaScript</h2>
+    <p id="stringInfo"></p>
+
+    <script>
+        let text = "JavaScript is Fun!";
+        let length = text.length;                  
+        let upper = text.toUpperCase();             
+        let lower = text.toLowerCase();            
+        let part = text.substring(0, 10);          
+        let replaced = text.replace("Fun", "Powerful"); 
+        document.getElementById("stringInfo").innerHTML =
+            "Original Text: " + text + "<br>" +
+            "Length of String: " + length + "<br>" +
+            "Uppercase: " + upper + "<br>" +
+            "Lowercase: " + lower + "<br>" +
+            "Substring (0–10): " + part + "<br>" +
+            "After Replace: " + replaced + "<br>" +
+            "Visit for more info: <a href='https://www.w3schools.com/js/js_syntax.asp' target='_blank'>JavaScript Tutorial</a>";
+    </script>
+</body>
+</html>
